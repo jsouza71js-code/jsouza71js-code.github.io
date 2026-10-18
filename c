@@ -1,0 +1,7 @@
+allback/index.html<!doctype html><html><head><meta charset="utf-8"><meta name="robots" content="noindex"><title>Tesla auth callback</title></head>
+<body style="font-family:sans-serif;max-width:40em;margin:3em auto">
+<h2>Tesla sign-in finished</h2>
+<p>Copy this one-time code back to the box (it expires in minutes and is useless without the app secret). Nothing is sent anywhere from this page.</p>
+<pre id="c" style="background:#eee;padding:1em;word-break:break-all"></pre>
+<script>var p=new URLSearchParams(location.search);document.getElementById('c').textContent=p.get('code')?('code='+p.get('code')+'\nstate='+(p.get('state')||'')):('error: '+(p.get('error')||'no code in URL'));</script>
+</body></html>
